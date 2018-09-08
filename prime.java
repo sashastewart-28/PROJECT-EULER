@@ -8,24 +8,49 @@ public class prime
 	{
 		// TODO Auto-generated method stub
 		int i=1,c,j=1,ck=0;
-		while(true)
+		while(ck<=10001)
 		{
-			c=0;
-			for(j=1;j<=i;j++)
-			{
-				if(i%j==0)
-					c++;
-			}
-			if(c==2)
+			if(isPrime(i))
 			{
 				ck++;
 			}
-			i++;
-			if(ck==10001)
-				break;
+			i+=2;
 		}
-		System.out.println("10001st prime = "+i);
+		System.out.println("10001st prime = "+(i-2));
 
+	}
+	public static boolean isPrime(int i)
+	{
+		double n;
+		int f;
+		if(i == 1)
+			return false;
+		else if(i < 4)
+			return true;
+		else if(i%2 == 0)
+			return false;
+		else if(i < 9)
+			return true;
+		else if(i%3 == 0)
+			return false;
+		else
+		{
+			n = Math.floor(Math.sqrt(i));
+			f = 5;
+			while(f <= n)
+			{
+				if(i%f == 0)
+				{
+					return false;
+				}
+				if(n%(f+2) == 0)
+				{
+					return false;
+				}
+				f = f+6;
+			}
+			return true;
+		}
 	}
 
 }
