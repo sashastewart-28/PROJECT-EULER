@@ -7,21 +7,20 @@ public class pythagoreantriplets
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
-		int i,j,k;
-		for(i=0;i<998;i++)
+		int i,j,a,b,c;
+		int sq=(int)Math.sqrt(1000);
+		for(i=0;i<=sq;i++)
 		{
-			for(j=0;j<i;j++)
+			for(j=i+1;j<=sq;j++)
 			{
-				for(k=0;k<j;k++)
+				a=(i*i)-(j*j);
+				b=2*i*j;
+				c=(i*i)+(j*j);
+				if(a+b+c == 1000)
 				{
-					if(((k*k)+(j*j)) == (i*i) && i+j+k == 1000)
-					{
-						System.out.println(i*j*k);
-					}
+					System.out.println("product is = "+(a*b*c));
 				}
 			}
 		}
-
 	}
-
 }
