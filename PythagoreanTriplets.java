@@ -1,7 +1,7 @@
 //There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 //Find the product abc.
 //EULER PROJECT 09
-public class pythagoreantriplets 
+public class PythagoreanTriplets 
 {
 
 	public static void main(String[] args) 
