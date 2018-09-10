@@ -2,7 +2,7 @@
 //Find the sum of all the multiples of 3 or 5 below 1000.
 //EULER PROJECT 01
 
-public class multiple35 
+public class Multiple35 
 {
 
  	public static void main(String[] args) 
